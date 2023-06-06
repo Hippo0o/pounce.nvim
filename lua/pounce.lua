@@ -345,7 +345,7 @@ function M.pounce(opts, ns)
         break
       elseif nr == "\x80kb" or nr == 8 then -- backspace or <C-h>
         input = input:sub(1, -2)
-      elseif nr == 21 then -- <C-u>
+      elseif nr == 21 or nr == 23 then -- <C-u> or <C-w>
         input = ""
       else
         local ch = vim.fn.nr2char(nr)
